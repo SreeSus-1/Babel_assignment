@@ -52,22 +52,26 @@ uv run babeldoc --openai --openai-api-key $env:OPENAI_API_KEY --openai-model "gp
   --output ".\Outputs"
 
 ---
-✅ Observed Issues
-1) Table/Box overlay issue
+✅ Issues Identified & Fixes (As per LunarTech Task Requirements)
+1) Mixed-language output (Chinese mixed with Hindi)
 
-Translated text appears behind table bounding boxes
+Issue: During EN → HI translation, the output sometimes contained Chinese characters mixed with Hindi, especially in headings and metadata sections.
+Fix/Improvement: Updated translation prompt + extraction settings to ensure the output stays strictly Hindi and preserves proper nouns/technical tokens unchanged.
+Result: Output is now consistently Hindi-only, without unwanted Chinese artifacts.
 
-Borders missing in some configurations
+2) Missing translation (eleventh page not translated earlier)
 
-Some table text is not translated unless --translate-table-text is enabled
+Issue: Some pages (ex: page 11) were not being translated and remained in English or partially untranslated.
+Fix/Improvement: Adjusted translation configuration and processing flags to ensure Babel captures and translates all layout regions correctly.
+Result: The previously untranslated page(s) now translate completely with correct layout preservation.
 
-2) Shape rendering affecting readability
+3) Tables formatting → improved meaningful table headers
 
-When curves/graphic elements are rendered, text positioning becomes incorrect
-
-Workaround tested: --skip-curve-render / --disable-graphic-element-process
+Issue: Table labels were unclear/untranslated.
+Fix/Improvement: Enabled table-specific translation handling and improved output formatting so that table headers become clear + meaningful in hindi.
+Result: Tables now render in a clean readable structure with meaningful Hindi table names/headers.
 
 ---
 ✅ Results
 
-Screenshots and comparisons are available in /Outputs.pdf
+Screenshots and comparisons are available in /Assignment_1.pdf
