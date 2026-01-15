@@ -1,7 +1,7 @@
 # Babel_assignment
 Translation tool
 
-# Babel Take-home Assignment – LunarTech (AI Engineering Apprentice)
+# Babel Take-home Assignment - LunarTech
 
 This repository contains my work for the Babel take-home assignment for LunarTech.
 
