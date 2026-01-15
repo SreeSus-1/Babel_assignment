@@ -51,5 +51,20 @@ uv run babeldoc --openai --openai-api-key $env:OPENAI_API_KEY --openai-model "gp
   --files "C:\Users\ramya\Downloads\babel\test\Redmoon\Documents Original\DESIGN AND FABRICATION OF JET ENGINE USING.pdf" `
   --output ".\Outputs"
 
+---
+✅ Observed Issues
+1) Table/Box overlay issue
+
+Translated text appears behind table bounding boxes
+
+Borders missing in some configurations
+
+Some table text is not translated unless --translate-table-text is enabled
+
+2) Shape rendering affecting readability
+
+When curves/graphic elements are rendered, text positioning becomes incorrect
+
+Workaround tested: --skip-curve-render / --disable-graphic-element-process
 
 
