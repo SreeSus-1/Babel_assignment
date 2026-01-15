@@ -67,4 +67,7 @@ When curves/graphic elements are rendered, text positioning becomes incorrect
 
 Workaround tested: --skip-curve-render / --disable-graphic-element-process
 
+---
+✅ Results
 
+Screenshots and comparisons are available in /Outputs.pdf
