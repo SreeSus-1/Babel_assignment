@@ -34,3 +34,22 @@ uv venv
 
 # Install dependencies
 uv sync
+
+---
+
+## ✅ API KEY SETUP
+$env:OPENAI_API_KEY="YOUR_KEY_HERE"
+
+---
+## ✅ Translation Command
+uv run babeldoc --openai --openai-api-key $env:OPENAI_API_KEY --openai-model "gpt-4o-mini" `
+  --lang-in en --lang-out hi `
+  --skip-curve-render `
+  --translate-table-text `
+  --disable-rich-text-translate --no-auto-extract-glossary `
+  --custom-system-prompt "You are a professional translator. Translate ONLY the given text from English to Hindi. Output plain Hindi text only. Do NOT add headings, markdown, bullet points, hashtags, or extra explanations. Do NOT rewrite or summarize. Preserve punctuation and spacing. Keep person names, affiliations, emails, URLs, citations EXACTLY unchanged. Do NOT translate code/JSON blocks; keep them exactly as-is." `
+  --files "C:\Users\ramya\Downloads\babel\test\Redmoon\Documents Original\DESIGN AND FABRICATION OF JET ENGINE USING.pdf" `
+  --output ".\Outputs"
+
+
+
